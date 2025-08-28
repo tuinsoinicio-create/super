@@ -1055,7 +1055,7 @@
         </div>
         
         <!-- Botón para proceder al pago -->
-        <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+        <button class="checkout-btn" id="checkoutBtn">Continuar</button>
         
         <!-- Formulario de datos del cliente -->
         <div class="customer-form" id="customerForm">
@@ -1063,7 +1063,7 @@
             
             <div class="form-group">
                 <label for="customerName">Nombre completo</label>
-                <input type="text" id="customerName" placeholder="Ingresa tu nombre">
+                <input type="text" id="customerName" placeholder="Ingresa tu nombre Completo">
             </div>
             
             <div class="form-group">
@@ -1463,7 +1463,7 @@
                 quantityOptions = `
                     <button class="qty-btn active" data-weight="1">1kg</button>
                     <button class="qty-btn" data-weight="0.5">½kg</button>
-                    <button class="qty-btn" data-weight="2">2kg</button>
+                    <button class="qty-btn" data-weight="0.25">¼kg</button>
                 `;
             } else {
                 quantityOptions = `
@@ -1802,7 +1802,7 @@
             if (unit === "kg") {
                 if (weight === 1) return '1 kg';
                 if (weight === 0.5) return '½ kg';
-                if (weight === 2) return '2 kg';
+                if (weight === 0.25) return '¼ kg';
                 return `${weight} kg`;
             } else {
                 if (weight === 1) return '1 un';
@@ -1922,8 +1922,8 @@
             const total = cart.reduce((sum, item) => sum + (item.price * item.weight * item.quantity), 0);
             message += `\n*Total:* $${formatPrice(total, false)}\n\n`;
             message += `*Mis datos:*\n`;
-            message += `Nombre: ${name}\n`;
-            message += `Teléfono: ${phone}\n`;
+            message += `Nombre   : ${name}\n`;
+            message += `Teléfono : ${phone}\n`;
             message += `Dirección: ${address}\n\n`;
             message += `Por favor confirmar disponibilidad y tiempo de entrega. ¡Gracias!`;
             
