@@ -2835,7 +2835,7 @@
             });
             
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.weight * item.quantity), 0);
-            const deliveryFee = subtotal >= 30000 ? 0 : 3000;
+            const deliveryFee = 3000;
             const total = subtotal + deliveryFee;
             
             message += `\n*Subtotal:* $${formatPrice(subtotal, false)}`;
