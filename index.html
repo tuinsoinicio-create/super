@@ -2841,11 +2841,11 @@
             message += `\n*Subtotal:* $${formatPrice(subtotal, false)}`;
             message += `\n*Envío:* ${deliveryFee === 0 ? 'Gratis' : '$' + formatPrice(deliveryFee, false)}`;
             message += `\n*Total:* $${formatPrice(total, false)}\n\n`;
-            message += `*Mis datos:*\n`;
-            message += `Nombre: ${name}\n`;
-            message += `RUT: ${rut}\n`;
-            message += `Teléfono: ${phone}\n`;
-            message += `Dirección: ${address}\n`;
+            message += `*Mis datos :*\n`;
+            message += `Nombre     : ${name}\n`;
+            message += `RUT        : ${rut}\n`;
+            message += `Teléfono   : ${phone}\n`;
+            message += `Dirección  : ${address}\n`;
             
             if (notes) {
                 message += `Indicaciones: ${notes}\n`;
